@@ -1,0 +1,27 @@
+.login__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 40% 0 0;
+}
+
+.login__button {
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  height: 3em;
+  margin: 0.5em 0;
+  text-transform: uppercase;
+  width: 20.55em;
+}
+
+.login__button:disabled {
+  background-color: rgb(97, 97, 97);
+  cursor: auto;
+}
+
+.login__input {
+  height: 3em;
+  width: 20em;
+}

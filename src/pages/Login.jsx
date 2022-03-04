@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
+import './styles/Login.css';
+
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -38,7 +40,7 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div className="login__container">
       <h1>LOGIN</h1>
       <input
         data-testid="email-input"
@@ -46,6 +48,7 @@ export default function Login() {
         placeholder="Email"
         value={ email }
         onChange={ ({ target }) => inputEmail(target.value) }
+        className="login__input"
       />
       <input
         type="password"
@@ -53,12 +56,14 @@ export default function Login() {
         placeholder="Senha"
         value={ password }
         onChange={ (e) => setPassword(e.target.value) }
+        className="login__input"
       />
       <button
         data-testid="login-submit-btn"
         type="button"
         disabled={ buttonDisabled() }
         onClick={ () => handleClick() }
+        className="login__button"
       >
         {' '}
         Entrar
